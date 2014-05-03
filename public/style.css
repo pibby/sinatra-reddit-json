@@ -86,6 +86,12 @@ ul.items li p {
 ul.items li p a {
   color: #4f5f6f;
 }
+ul.items li p a:hover {
+  color: #fc4c7a;
+}
+ul.items li p a:visited {
+  color: #a1b1c2;
+}
 ul.items li:last-child {
   border-bottom: 1px solid #e7ebf0;
 }
