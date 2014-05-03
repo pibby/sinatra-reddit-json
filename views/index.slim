@@ -1,0 +1,18 @@
+.col-1
+	h3 Already Reddit on #{@subtitle}
+	ul.items
+		- @items.each do |item|
+			- score = item["data"]["score"]
+			- url = item["data"]["url"]
+			- title = item["data"]["title"]
+			- permalink = item["data"]["permalink"]
+			- num_comments = item["data"]["num_comments"]
+			- sub = item["data"]["subreddit"] 
+			li
+				p.score= score
+				p.info
+					a href="#{url}" target="_blank" #{title}
+				p.meta
+					small
+						a href="http://www.reddit.com#{permalink}" target="_blank" #{num_comments} comments
+						|  via /r/#{sub}
